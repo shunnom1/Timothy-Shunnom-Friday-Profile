@@ -11,6 +11,35 @@ body {
   background: #f1f1f1;
 }
 
+.hero {
+  background: rgb(115, 207, 247);
+  color: black;
+  text-align: center;
+  padding: 70px 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: auto;
+
+}
+
+.cta-button {
+
+  text-align: center;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+
 /* Header */
 .header {
   text-align: center;
@@ -22,9 +51,15 @@ body {
 .topnav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #333;
-  padding: 10px 0;
+  padding: 10px 20px;
 }
+.topnav div {
+  display: flex;
+  gap: 15px; /* Added gap for even spacing */
+}
+
 
 .topnav a {
   color: white;
@@ -83,9 +118,39 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 800px) {
   .row {
-    flex-direction: column; /* Stack on small screens */
+    flex-direction: column; /* Stack sections */
+  }
+
+  .cta-button {
+    width: 100%; /* Ensure button spans full width */
+    text-align: center;
+  }
+
+  .navbutton button {
+    width: 100%; /* Full width for navigation buttons */
+  }
+
+  .column {
+    margin-bottom: 20px; /* Add spacing between stacked columns */
+  }
+
+  .column button {
+    width: 100%; /* Ensure buttons inside columns are responsive */
+  }
+
+  .topnav {
+    flex-direction: column; /* Stack navigation items */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .topnav div {
+    flex-direction: column; /* Stack navigation links */
+    gap: 10px; /* Adjust spacing for stacked links */
+  }
+
+  .hero {
+    padding: 50px 10px; /* Adjust padding for smaller screens */
   }
 }
-
 
 
